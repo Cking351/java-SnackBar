@@ -4,15 +4,15 @@ public class Customer {
     private int maxId = 0;
     private int id;
     private String name;
-    private double cashonHand;
+    private double cashOnHand;
 
     // Constructor
-    public Customer(String name, double cashonHand) {
+    public Customer(String name, double cashOnHand) {
         maxId++;
 
         id = maxId;
         this.name = name;
-        this.cashonHand = cashonHand;
+        this.cashOnHand = cashOnHand;
     }
 
     // Getters
@@ -21,7 +21,7 @@ public class Customer {
     }
 
     public double getCashOnHand() {
-        return cashonHand;
+        return cashOnHand;
     }
 
     // Setters
@@ -29,16 +29,16 @@ public class Customer {
         this.name = name;
     }
 
-    public void setCashOnHand(double cashonHand) {
-        this.cashonHand = cashonHand;
+    public void setCashOnHand(double cashOnHand) {
+        this.cashOnHand = cashOnHand;
     }
 
     // Other methods
     public void buySnack(double snackPrice) {
-        cashonHand = cashonHand - snackPrice;
+        this.cashOnHand = this.cashOnHand - snackPrice;
     }
 
     public void addCash(double cashToAdd) {
-        cashonHand = cashonHand + cashToAdd;
+        this.cashOnHand = this.cashOnHand + cashToAdd;
     }
 }
