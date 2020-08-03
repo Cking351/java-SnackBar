@@ -56,4 +56,17 @@ public class Snack {
     public void setMachineId(int machineId) {
         this.machineId = machineId;
     }
+
+    // Other methods
+    public void addSnack(int added) {
+        this.quantity = this.quantity + added;
+    }
+
+    public void buySnack(int boughtQuantity) {
+        this.quantity = this.quantity - boughtQuantity;
+    }
+
+    public double totalCost() {
+        return quantity * cost;
+    }
 }
